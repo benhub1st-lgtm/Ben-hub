@@ -54,6 +54,12 @@
             color: #cbd5e1;
             margin-bottom: 25px;
         }
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .btn {
             display: inline-block;
             background-color: #0ea5e9;
@@ -64,8 +70,16 @@
             border-radius: 6px;
             transition: 0.3s;
         }
+        .btn-channel {
+            background-color: #22c55e;
+        }
+        .btn-community {
+            background-color: #f59e0b;
+            color: #000;
+        }
         .btn:hover {
-            background-color: #0284c7;
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
         .services {
             display: grid;
@@ -103,7 +117,69 @@
         .card.boosting ul li::before {
             content: "🚀";
         }
-        
+
+        /* Community & Content Showcase Section */
+        .showcase-section {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #334155;
+        }
+        .showcase-section h3 {
+            color: #f59e0b;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .showcase-section p.subtext {
+            color: #cbd5e1;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .media-card {
+            background-color: #0f172a;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #334155;
+        }
+        .media-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .media-info {
+            padding: 15px;
+        }
+        .media-info h4 {
+            color: #38bdf8;
+            margin-bottom: 8px;
+        }
+        .media-info p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Chat Integration Box */
+        .chat-container {
+            background-color: #0f172a;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 25px;
+            border: 1px solid #334155;
+            text-align: center;
+        }
+        .chat-container h4 {
+            color: #22c55e;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
         /* Payment & Contact Section Styling */
         .payment-section {
             background-color: #1e293b;
@@ -136,14 +212,19 @@
         }
         .payment-card h4 {
             color: #f59e0b;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-size: 1.2rem;
         }
         .payment-card p {
             color: #fff;
             font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 0;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .payment-card a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
         }
         
         footer {
@@ -167,7 +248,10 @@
         <section class="hero">
             <h2>የሶሻል ሚዲያዎን ያሳድጉ፤ በሜጋ ጌሚንግ አሬናችን ይዝናኑ!</h2>
             <p>የYouTube, Instagram እና Twitter ገጾችን ማሳደጊያ እና የClash of Clans አፍቃሪዎች ማዕከል!</p>
-            <a href="https://t.me/የአንተ_ዩዘርኔም" class="btn" target="_blank">አሁኑኑ በቴሌግራም ያግኙን 🚀</a>
+            <div class="cta-buttons">
+                <a href="https://t.me/ronalstben" class="btn" target="_blank">በቴሌግራም ያግኙን 🚀</a>
+                <a href="https://t.me/ronalster" class="btn btn-channel" target="_blank">ቴሌግራም ቻናል ይቀላቀሉ 📢</a>
+            </div>
         </section>
 
         <section class="services">
@@ -190,22 +274,59 @@
             </div>
         </section>
 
+        <!-- Gaming Showcase & Community Hub Section -->
+        <section class="showcase-section">
+            <h3>🏰 Clash of Clans & Gaming Hub</h3>
+            <p class="subtext">የቅርብ ጊዜ የTown Hall Base Layouts፣ የጦርነት ቪዲዮዎች እና የስትራቴጂ መረጃዎች!</p>
+            
+            <div class="media-grid">
+                <div class="media-card">
+                    <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80&w=600" alt="Base Layout">
+                    <div class="media-info">
+                        <h4>Town Hall Base Layouts</h4>
+                        <p>ለ Clan Wars እና ለ Trophy Pushing የሚሆኑ ምርጥ የቤዝ ዲዛይኖች እና ፎቶዎች።</p>
+                    </div>
+                </div>
+
+                <div class="media-card">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600" alt="Attack Strategy">
+                    <div class="media-info">
+                        <h4>Attack Strategies & Videos</h4>
+                        <p>የ3-Star አታክ ስልቶች፣ የጦርነት ቪዲዮዎች እና የጌም አጫወቱ ምክሮች።</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrated Community Chat Option -->
+            <div class="chat-container">
+                <h4>💬 የቀጥታ ውይይት እና መረጃ ልውውጥ (Community Chat)</h4>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">ከሌሎች ጌመሮች ጋር ለመወያየት፣ ፎቶዎችን እና ቪዲዮዎችን ለመልቀቅ ወይም የቻት ቦት ለመጠቀም ከታች ያለውን ይጫኑ፦</p>
+                <a href="https://t.me/ronalster" class="btn btn-community" target="_blank">የጌሚንግ ውይይቱን ይቀላቀሉ (Join Chat Group) 💬</a>
+            </div>
+        </section>
+
         <!-- Payment & Contact Section -->
         <section class="payment-section">
             <h3>💳 ክፍያ እና ግንኙነት (Payment & Contact)</h3>
             <p>በቴሌብር ክፍያ ፈጽመው ደረሰኙን በቴሌግራም ይላኩልን ወይም በቀጥታ ይደውሉልን፦</p>
             <div class="payment-grid">
                 <div class="payment-card">
-                    <h4>📱 Telebirr / የስልክ ቁጥር</h4>
+                    <h4>📱 Telebirr / የስልክ ቁጥሮች</h4>
                     <p>0939175789</p>
+                    <p>0985867883</p>
+                </div>
+                <div class="payment-card">
+                    <h4>💬 Telegram Contact</h4>
+                    <p>Username: <a href="https://t.me/ronalstben" target="_blank">@ronalstben</a></p>
+                    <p>Channel: <a href="https://t.me/ronalster" target="_blank">@ronalster</a></p>
                 </div>
             </div>
         </section>
     </div>
 
     <footer>
-
-    
+        <p>&copy; 2026 Ben Hub. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
