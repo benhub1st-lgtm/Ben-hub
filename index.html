@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Hub - Digital Boosting & Gaming Arena</title>
+    <title>Ben Hub - Clash of Clans Town Hall Guide (TH1 - TH17)</title>
     <style>
         * {
             box-sizing: border-box;
@@ -38,7 +38,7 @@
         }
         .hero {
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1000') no-repeat center center/cover;
             border-radius: 12px;
             margin-bottom: 30px;
@@ -46,194 +46,96 @@
         }
         .hero h2 {
             font-size: 2rem;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #fff;
-        }
-        .hero p {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            margin-bottom: 25px;
         }
         .cta-buttons {
             display: flex;
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 15px;
         }
         .btn {
             display: inline-block;
             background-color: #0ea5e9;
             color: #fff;
-            padding: 12px 24px;
+            padding: 10px 20px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 6px;
-            transition: 0.3s;
         }
-        .btn-channel {
-            background-color: #22c55e;
+        .btn-channel { background-color: #22c55e; }
+
+        .th-section-title {
+            color: #f59e0b;
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 35px 0 20px 0;
+            padding-top: 10px;
+            border-top: 1px dashed #334155;
         }
-        .btn-community {
-            background-color: #f59e0b;
-            color: #000;
+        .th-card {
+            background-color: #1e293b;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #334155;
         }
-        .btn:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
+        .th-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
         }
-        .services {
+        .th-header h3 {
+            color: #38bdf8;
+            font-size: 1.4rem;
+        }
+        .th-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
         }
-        .card {
+        .th-item {
+            background-color: #0f172a;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #f59e0b;
+        }
+        .th-item strong {
+            color: #22c55e;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .payment-section {
             background-color: #1e293b;
             padding: 25px;
             border-radius: 10px;
-            text-align: left;
-            border-top: 4px solid #0ea5e9;
-        }
-        .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #38bdf8;
-        }
-        .card ul {
-            list-style-type: none;
-        }
-        .card ul li {
-            margin-bottom: 8px;
-            color: #cbd5e1;
-            position: relative;
-            padding-left: 20px;
-        }
-        .card ul li::before {
-            content: "⚔️";
-            position: absolute;
-            left: 0;
-            font-size: 0.8rem;
-        }
-        .card.boosting ul li::before {
-            content: "🚀";
-        }
-
-        /* Community & Content Showcase Section */
-        .showcase-section {
-            background-color: #1e293b;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            border: 1px solid #334155;
-        }
-        .showcase-section h3 {
-            color: #f59e0b;
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        .showcase-section p.subtext {
-            color: #cbd5e1;
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        .media-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .media-card {
-            background-color: #0f172a;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #334155;
-        }
-        .media-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-        .media-info {
-            padding: 15px;
-        }
-        .media-info h4 {
-            color: #38bdf8;
-            margin-bottom: 8px;
-        }
-        .media-info p {
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-
-        /* Chat Integration Box */
-        .chat-container {
-            background-color: #0f172a;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 25px;
+            margin-top: 40px;
             border: 1px solid #334155;
             text-align: center;
-        }
-        .chat-container h4 {
-            color: #22c55e;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        /* Payment & Contact Section Styling */
-        .payment-section {
-            background-color: #1e293b;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 40px;
-            border: 1px solid #334155;
-            text-align: center;
-        }
-        .payment-section h3 {
-            color: #38bdf8;
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-        }
-        .payment-section p {
-            color: #94a3b8;
-            margin-bottom: 20px;
         }
         .payment-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
         }
         .payment-card {
             background-color: #0f172a;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
-            border: 1px solid #334155;
         }
-        .payment-card h4 {
-            color: #f59e0b;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-        .payment-card p {
-            color: #fff;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-        .payment-card a {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
+
         footer {
-            background-color: #1e293b;
             text-align: center;
             padding: 20px;
-            font-size: 0.9rem;
             color: #94a3b8;
-            border-top: 1px solid #334155;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -241,84 +143,189 @@
 
     <header>
         <h1>BEN HUB</h1>
-        <p>Your Digital Marketplace & Gaming Center!</p>
+        <p>Complete Clash of Clans Town Hall Guide (TH1 - TH17)</p>
     </header>
 
     <div class="container">
         <section class="hero">
-            <h2>የሶሻል ሚዲያዎን ያሳድጉ፤ በሜጋ ጌሚንግ አሬናችን ይዝናኑ!</h2>
-            <p>የYouTube, Instagram እና Twitter ገጾችን ማሳደጊያ እና የClash of Clans አፍቃሪዎች ማዕከል!</p>
+            <h2>የ Town Hall ደረጃዎች እና አብረዋቸው የሚከፈቱ ነገሮች</h2>
             <div class="cta-buttons">
                 <a href="https://t.me/ronalstben" class="btn" target="_blank">በቴሌግራም ያግኙን 🚀</a>
                 <a href="https://t.me/ronalster" class="btn btn-channel" target="_blank">ቴሌግራም ቻናል ይቀላቀሉ 📢</a>
             </div>
         </section>
 
-        <section class="services">
-            <div class="card boosting">
-                <h3>🚀 Digital Media Boosting</h3>
-                <ul>
-                    <li>YouTube Subscribers, Views & Likes</li>
-                    <li>Instagram Followers & Likes</li>
-                    <li>Twitter (X) Followers, Views & Likes</li>
-                </ul>
+        <!-- PART 1 -->
+        <h2 class="th-section-title">🏰 Part 1: Town Hall 1 - Town Hall 5</h2>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 1</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Cannon (x1)</div>
+                <div class="th-item"><strong>⚔️ Troops:</strong> Barbarian</div>
+                <div class="th-item"><strong>💰 Buildings:</strong> Gold Mine, Elixir Collector</div>
             </div>
+        </div>
 
-            <div class="card">
-                <h3>🎮 Gaming Arena</h3>
-                <ul>
-                    <li><strong>Clash of Clans</strong> — Clan Battles & Strategy Hub</li>
-                    <li><strong>Age of Empires</strong> — Real-Time Strategy Battles</li>
-                    <li><strong>Survival Games</strong> — Last Day on Earth & More</li>
-                </ul>
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 2</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Archer Tower, Cannon, Walls</div>
+                <div class="th-item"><strong>⚔️ Troops:</strong> Archer, Goblin</div>
+                <div class="th-item"><strong>🛖 Buildings:</strong> Clan Castle</div>
             </div>
-        </section>
+        </div>
 
-        <!-- Gaming Showcase & Community Hub Section -->
-        <section class="showcase-section">
-            <h3>🏰 Clash of Clans & Gaming Hub</h3>
-            <p class="subtext">የቅርብ ጊዜ የTown Hall Base Layouts፣ የጦርነት ቪዲዮዎች እና የስትራቴጂ መረጃዎች!</p>
-            
-            <div class="media-grid">
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80&w=600" alt="Base Layout">
-                    <div class="media-info">
-                        <h4>Town Hall Base Layouts</h4>
-                        <p>ለ Clan Wars እና ለ Trophy Pushing የሚሆኑ ምርጥ የቤዝ ዲዛይኖች እና ፎቶዎች።</p>
-                    </div>
-                </div>
-
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600" alt="Attack Strategy">
-                    <div class="media-info">
-                        <h4>Attack Strategies & Videos</h4>
-                        <p>የ3-Star አታክ ስልቶች፣ የጦርነት ቪዲዮዎች እና የጌም አጫወቱ ምክሮች።</p>
-                    </div>
-                </div>
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 3</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Mortar, Bomb, Walls</div>
+                <div class="th-item"><strong>⚔️ Troops:</strong> Giant, Wall Breaker</div>
+                <div class="th-item"><strong>🧪 Buildings:</strong> Laboratory</div>
             </div>
+        </div>
 
-            <!-- Integrated Community Chat Option -->
-            <div class="chat-container">
-                <h4>💬 የቀጥታ ውይይት እና መረጃ ልውውጥ (Community Chat)</h4>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">ከሌሎች ጌመሮች ጋር ለመወያየት፣ ፎቶዎችን እና ቪዲዮዎችን ለመልቀቅ ወይም የቻት ቦት ለመጠቀም ከታች ያለውን ይጫኑ፦</p>
-                <a href="https://t.me/ronalster" class="btn btn-community" target="_blank">የጌሚንግ ውይይቱን ይቀላቀሉ (Join Chat Group) 💬</a>
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 4</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Air Defense, Spring Trap</div>
+                <div class="th-item"><strong>⚔️ Troops:</strong> Balloon</div>
+                <div class="th-item"><strong>🛖 Buildings:</strong> Barracks Lvl 6</div>
             </div>
-        </section>
+        </div>
 
-        <!-- Payment & Contact Section -->
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 5</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Wizard Tower, Air Bomb</div>
+                <div class="th-item"><strong>⚔️ Troops & Spells:</strong> Wizard, Lightning Spell</div>
+                <div class="th-item"><strong>🧪 Buildings:</strong> Spell Factory</div>
+            </div>
+        </div>
+
+        <!-- PART 2 -->
+        <h2 class="th-section-title">⚔️ Part 2: Town Hall 6 - Town Hall 10</h2>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 6</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Air Sweeper, Giant Bomb</div>
+                <div class="th-item"><strong>⚔️ Troops & Spells:</strong> Healer, Healing Spell</div>
+            </div>
+        </div>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 7</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>👑 Heroes:</strong> Barbarian King</div>
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Hidden Tesla, Seeking Air Mine</div>
+                <div class="th-item"><strong>⚔️ Troops:</strong> Dragon, Minion, Hog Rider</div>
+            </div>
+        </div>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 8</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Bomb Tower, Skeleton Trap</div>
+                <div class="th-item"><strong>⚔️ Troops & Spells:</strong> PEKKA, Valkyrie, Golem, Poison, Earthquake</div>
+            </div>
+        </div>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 9</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>👑 Heroes:</strong> Archer Queen</div>
+                <div class="th-item"><strong>🛡️ Defenses:</strong> X-Bow (x2)</div>
+                <div class="th-item"><strong>⚔️ Troops & Spells:</strong> Baby Dragon, Witch, Lava Hound, Jump, Haste</div>
+            </div>
+        </div>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 10</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Inferno Tower (x2)</div>
+                <div class="th-item"><strong>⚔️ Troops & Spells:</strong> Miner, Bowler, Freeze, Clone</div>
+                <div class="th-item"><strong>🛖 Buildings:</strong> Siege Workshop</div>
+            </div>
+        </div>
+
+        <!-- PART 3 -->
+        <h2 class="th-section-title">🔥 Part 3: Town Hall 11 - Town Hall 17</h2>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 11</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>👑 Heroes:</strong> Grand Warden</div>
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Eagle Artillery (x1), Tornado Trap</div>
+                <div class="th-item"><strong>⚔️ Troops & Spells:</strong> Electro Dragon, Ice Golem, Invisibility Spell</div>
+            </div>
+        </div>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 12</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>💥 TH Weapon:</strong> Giga Tesla (Town Hall Weapon)</div>
+                <div class="th-item"><strong>⚙️ Siege Machines:</strong> Wall Wrecker, Battle Blimp, Stone Slammer</div>
+                <div class="th-item"><strong>⚔️ Troops:</strong> Yeti, Headhunter</div>
+            </div>
+        </div>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 13</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>👑 Heroes:</strong> Royal Champion</div>
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Scattershot (x2), Giga Inferno</div>
+                <div class="th-item"><strong>⚔️ Troops & Siege:</strong> Dragon Rider, Siege Barracks</div>
+            </div>
+        </div>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 14</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🐾 Hero Pets:</strong> Lassi, Electro Owl, Mighty Yak, Unicorn</div>
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Poison Bomb TH Death Effect</div>
+                <div class="th-item"><strong>⚔️ Troops & Spells:</strong> Electro Titan, Recall Spell</div>
+            </div>
+        </div>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 15</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🛡️ Defenses:</strong> Spell Tower, Monolith</div>
+                <div class="th-item"><strong>🐾 Pets & Spells:</strong> Frosty, Diggy, Poison Lizard, Phoenix, Overgrowth Spell</div>
+                <div class="th-item"><strong>⚙️ Siege Machines:</strong> Battle Drill</div>
+            </div>
+        </div>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 16</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>🔮 Merged Defenses:</strong> Ricochet Cannon, Multi-Archer Tower</div>
+                <div class="th-item"><strong>🐾 Hero Pets:</strong> Spirit Fox, Angry Jelly</div>
+                <div class="th-item"><strong>⚔️ Troops:</strong> Root Rider</div>
+            </div>
+        </div>
+
+        <div class="th-card">
+            <div class="th-header"><h3>🏛️ Town Hall Level 17</h3></div>
+            <div class="th-grid">
+                <div class="th-item"><strong>⚡ TH Defense:</strong> Inferno Artillery (New Ultimate Weapon)</div>
+                <div class="th-item"><strong>🔮 Merged Defenses:</strong> Multi-Wizard Tower, Super Defenses</div>
+                <div class="th-item"><strong>⚔️ Troops & Equipment:</strong> Ultimate Hero Equipment & End-Game Content</div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
         <section class="payment-section">
-            <h3>💳 ክፍያ እና ግንኙነት (Payment & Contact)</h3>
-            <p>በቴሌብር ክፍያ ፈጽመው ደረሰኙን በቴሌግራም ይላኩልን ወይም በቀጥታ ይደውሉልን፦</p>
+            <h3 style="color: #38bdf8;">💳 ክፍያ እና ግንኙነት (Contact)</h3>
             <div class="payment-grid">
                 <div class="payment-card">
-                    <h4>📱 Telebirr / የስልክ ቁጥሮች</h4>
-                    <p>0939175789</p>
-                    <p>0985867883</p>
+                    <h4 style="color: #f59e0b;">📱 Telebirr</h4>
+                    <p>0939175789 / 0985867883</p>
                 </div>
                 <div class="payment-card">
-                    <h4>💬 Telegram Contact</h4>
-                    <p>Username: <a href="https://t.me/ronalstben" target="_blank">@ronalstben</a></p>
-                    <p>Channel: <a href="https://t.me/ronalster" target="_blank">@ronalster</a></p>
+                    <h4 style="color: #f59e0b;">💬 Telegram</h4>
+                    <p>@ronalstben | @ronalster</p>
                 </div>
             </div>
         </section>
